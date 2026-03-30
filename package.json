@@ -1,0 +1,42 @@
+{
+  "name": "oidc-publishing",
+  "version": "0.1.0",
+  "description": "OIDC publishing tools for GitHub and npm",
+  "exports": {
+    "./package": "./package.json",
+    ".": "./index.js"
+  },
+  "bin": {
+    "oidc-publishing": "bin.js"
+  },
+  "files": [
+    "index.js",
+    "bin.js",
+    "lib"
+  ],
+  "scripts": {
+    "format": "prettier --write . && lunte --fix",
+    "lint": "prettier --check . && lunte",
+    "test": "npm run test:bare && npm run test:node",
+    "test:bare": "brittle-bare --coverage test.js",
+    "test:node": "brittle-node --coverage test.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/oidc-publishing.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/oidc-publishing/issues"
+  },
+  "homepage": "https://github.com/holepunchto/oidc-publishing#readme",
+  "dependencies": {
+    "paparam": "^1.8.0"
+  },
+  "devDependencies": {
+    "brittle": "^3.18.0",
+    "prettier": "^3.4.1",
+    "prettier-config-holepunch": "^2.0.0"
+  }
+}
